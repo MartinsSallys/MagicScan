@@ -1,22 +1,25 @@
-# MagicScan 🔮
-Offline Malware Scanner for Windows systems using Linux Live environments.
+# MagicScan 🧙‍♂️
+MagicScan é uma ferramenta de **scan offline de malware** para sistemas Windows,
+executada a partir de um **Linux Live** para evitar rootkits e técnicas de evasão.
 
-## 🔥 Why MagicScan?
-Malware can hide itself when the infected OS is running.
-MagicScan performs detection **outside the compromised system**, reducing evasion by rootkits.
+## 🚀 Motivação
+Malwares avançados conseguem se esconder quando o sistema infectado está em execução.
+O MagicScan roda **fora do Windows**, analisando arquivos NTFS em modo read-only.
 
-## 🧠 Features
-- Offline scan (Linux Live)
-- Read-only NTFS mount
-- Hash-based detection (Abuse.ch)
-- PE structure analysis
-- JSON forensic reports
+## 🛠️ Funcionalidades
+- Scan por **hash MD5** (base pública)
+- Detecção heurística simples (regex / YARA-like)
+- Relatório em JSON
+- Execução 100% offline (opcional)
 
-## 🚀 Usage
+## 📦 Requisitos
+- Linux Live (Ubuntu, Fedora, Kali, etc.)
+- Python 3
+- Permissões de root
+- Partição Windows montada como read-only
 
-### 1. Boot Linux Live
-Ubuntu / Kali / Rescue ISO.
+## ▶️ Uso básico
 
-### 2. Mount Windows partition (read-only)
 ```bash
 sudo mount -o ro /dev/sda2 /mnt/windows
+sudo python3 magicscan.py /mnt/windows
