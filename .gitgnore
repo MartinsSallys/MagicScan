@@ -1,0 +1,19 @@
+# Python 
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Reports and logs 
+reports/
+scan_errors.log
+
+# Local hash cach
+badhashes.json
+
+# Segurança )
+.env
+
+# IDEs
+.vscode/
+.idea/
